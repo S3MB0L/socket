@@ -1,6 +1,6 @@
 #socket
 
-Usage
+##Usage
         socket -s 1 -p 67677 -b 256                 ==> Server
         socket -c 1 -p 67677 -b 256 -n 127.0.0.1    ==> Client
         
@@ -9,5 +9,5 @@ Usage
         -p : port number
         -n : hostName
         
-Install
+##Install
         [bash]$ make install
