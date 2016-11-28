@@ -1,4 +1,4 @@
-#socket
+#SOCKET
 
 ##Usage
         socket -s 1 -p 67677 -b 256                 ==> Server
