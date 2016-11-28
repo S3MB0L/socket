@@ -1,8 +1,8 @@
 #socket
 
 Usage:
-        socket -s 1 -p 67677 -b 256                 ==> Server
-        socket -c 1 -p 67677 -b 256 -n 127.0.0.1    ==> Client
+      *  socket -s 1 -p 67677 -b 256                 ==> Server
+      *  socket -c 1 -p 67677 -b 256 -n 127.0.0.1    ==> Client
         
         -s : works as server side
         -c : works as client side
