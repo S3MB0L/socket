@@ -1,5 +1,4 @@
-/* A simple server in the internet domain using TCP
-   The port number is passed as an argument */
+
 #include "main.h"
 
 int server(struct socket_data socket_1)
@@ -32,8 +31,8 @@ int server(struct socket_data socket_1)
      n = read(newsockfd,buffer,255);
      if (n < 0) error("ERROR reading from socket");
      printf("Here is the message: %s\n",buffer);
-     n = write(newsockfd,"I got your message",18);
-     if (n < 0) error("ERROR writing to socket");
+     n = write(newsockfd,"I got your message.",18);
+     if (n < 0) error("ERROR writing to socket.");
      close(newsockfd);
      close(sockfd);
      return 0; 

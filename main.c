@@ -1,17 +1,9 @@
-/* pelikan
- * vatoz
- * vaşak
- * kronos
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
+/*
+ * Author Tarkan Dalay
+ * mail: tarkandalay52@gmail.com
+ * date: 28/11/2016
+ * rev:0.01b
+ * 
  * */
 
 #include <stdio.h>
@@ -28,13 +20,8 @@ void error(const char *msg)
 
 int main (int argc, char *argv[]) {
 int cnt=0;
-//int opt,cnt=0;
-//int portnumb = 0;
-//char *ip = 0;
-//int buff_size=0;
-//char socket_status;
+
 while((socket_1.opt=getopt(argc,argv,"sc:p:b:n:"))!=-1){
-    //printf("%c",opt[cnt]);
 
     cnt++;
     switch (socket_1.opt) {
@@ -72,35 +59,3 @@ while((socket_1.opt=getopt(argc,argv,"sc:p:b:n:"))!=-1){
 
 return 0;
  }
-
-
-
-
-
-//while ((opt = getopt(argc, argv, "i:o:")) != -1) {
-//    switch(opt) {
-//    case 'i':
-//    in_fname = optarg;
-//    printf("\nInput option value=%s", in_fname);
-//    break;
-//    case 'o':
-//    out_fname = optarg;
-//    printf("\nOutput option value=%s", out_fname);
-//    break;
-//    case '?':
-//    /* Case when user enters the command as
-//     * $ ./cmd_exe -i
-//     */
-//    if (optopt == 'i') {
-//    printf("\nMissing mandatory input option");
-//    /* Case when user enters the command as
-//     * # ./cmd_exe -o
-//     */
-//  } else if (optopt == 'o') {
-//     printf("\nMissing mandatory output option");
-//  } else {
-//     printf("\nInvalid option received");
-//  }
-//  break;
-// }
-// }
