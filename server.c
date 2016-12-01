@@ -1,12 +1,14 @@
 
 #include "main.h"
 
+
 int server(struct socket_data socket_1)
 {
      int sockfd, newsockfd, portno;
      socklen_t clilen;
      char buffer[socket_1.buff_size];
      struct sockaddr_in serv_addr, cli_addr;
+     char __exit[]="./close";
      int n;
 
      sockfd = socket(AF_INET, SOCK_STREAM, 0);
@@ -27,12 +29,16 @@ int server(struct socket_data socket_1)
                  &clilen);
      if (newsockfd < 0) 
           error("ERROR on accept");
+     while(1){
      bzero(buffer,256);
      n = read(newsockfd,buffer,255);
      if (n < 0) error("ERROR reading from socket");
      printf("Here is the message: %s\n",buffer);
-     n = write(newsockfd,"I got your message.",18);
+     n = write(newsockfd,buffer,strlen(buffer));
      if (n < 0) error("ERROR writing to socket.");
+     if(strcmp(buffer,__exit)==0)
+         break;
+     }
      close(newsockfd);
      close(sockfd);
      return 0; 

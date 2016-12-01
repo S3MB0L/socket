@@ -16,7 +16,16 @@ void error(const char *msg)
     exit(0);
 }
 
-
+int __exit_status(char *buff, char *close_sock){
+    int n=0;
+    for(int i=0;i<strlen(close_sock);i++){
+        if(close_sock[i]!=buff[i])
+            return 0;
+        else
+            n=1;
+    }
+    return n;
+}
 
 int main (int argc, char *argv[]) {
 int cnt=0;

@@ -20,5 +20,5 @@ struct socket_data{
 void error(const char *msg);
 int client(struct socket_data socket_1);
 int server(struct socket_data socket_1);
-
+int __exit_status(char *buff, char *close_sock);
 #endif // MAIN_H

@@ -7,7 +7,7 @@ int client(struct socket_data socket_1)
     int sockfd, portno, n;
     struct sockaddr_in serv_addr;
     struct hostent *server;
-
+    char __exit[]="./close";
     char buffer[256];
 
     portno = socket_1.portnum;
@@ -27,6 +27,8 @@ int client(struct socket_data socket_1)
     serv_addr.sin_port = htons(portno);
     if (connect(sockfd,(struct sockaddr *) &serv_addr,sizeof(serv_addr)) < 0) 
         error("ERROR connecting");
+
+    while (1) {
     printf("Please enter the message: ");
     bzero(buffer,256);
     fgets(buffer,255,stdin);
@@ -38,6 +40,9 @@ int client(struct socket_data socket_1)
     if (n < 0) 
          error("ERROR reading from socket");
     printf("%s\n",buffer);
+    if(strcmp(buffer,__exit)==0)
+        break;
+    }
     close(sockfd);
     return 0;
 }
