@@ -11,3 +11,9 @@
         
 ##Install
         [bash]$ make install
+
+##Commands 
+        ./close
+        ./status
+        ./set_relayx
+        !!!Fonctions not defined, commands just prints some text but you can define 
