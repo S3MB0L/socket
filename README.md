@@ -6,6 +6,7 @@
         
         -s : works as server side
         -c : works as client side
+        -b : buffer size
         -p : port number
         -n : hostName
         
