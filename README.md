@@ -10,7 +10,9 @@
         -n : hostName
         
 ##Install
+        For Linux (installation path: /usr/bin)
         [bash]$ make install
+        
 
 ##Commands 
         ./close
